@@ -72,7 +72,7 @@ if ticker:
         if not df.empty:
             if isinstance(df.columns, pd.MultiIndex):
                 df.columns = df.columns.get_level_values(0)
-            
+
             df = df.dropna()
             df['SMA_20'] = df['Close'].rolling(window=20).mean()
 
